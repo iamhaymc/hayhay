@@ -1,0 +1,33 @@
+[project]
+name = "agent"
+version = "0.1.0"
+description = "Yet another agent harness"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2",
+    "omegaconf",
+    "websockets",
+    "openai",
+    "openai-agents",
+    "cachetools",
+    "transformers @ git+https://github.com/huggingface/transformers",
+    "accelerate",
+    "lighteval",
+    "pillow"
+]
+
+[project.optional-dependencies]
+e2e = ["playwright"]
+
+[project.scripts]
+agent = "agent:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+include = ["main.py", "ui.html", "ui.css", "ui.js"]

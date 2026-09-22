@@ -1,0 +1,33 @@
+**/*erotic*
+
+# -----------------------------
+# Build
+
+build/
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+
+# -----------------------------
+# Python
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.venv-hf/
+
+# -----------------------------
+# System
+
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Other
+
+.hf-cache/
